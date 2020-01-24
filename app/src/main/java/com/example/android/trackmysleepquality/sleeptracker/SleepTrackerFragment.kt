@@ -70,7 +70,7 @@ class SleepTrackerFragment : Fragment() {
 
         sleepTrackerViewModel.navigateToSleepDataQuality.observe(this, Observer { night ->
             night?.let {
-                this.findNavController().navigate(SleepTrackerFragmentDirections.actionSleepTrackerFragmentToSleepQualityFragment(night))
+                this.findNavController().navigate(SleepTrackerFragmentDirections.actionSleepTrackerFragmentToSleepDetailFragment(night))
                 sleepTrackerViewModel.onSleepDataQualityNavigated()
             }
         })
